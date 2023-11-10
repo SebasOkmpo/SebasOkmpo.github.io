@@ -1,0 +1,141 @@
+body{                                                                      /*Para dar formato a una etiqueta especifica se pone # cuando es id y se pone . cuando es clase*/
+ 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Helvetica, sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(180deg,#0000008c 0%,#0000008c 100%), url(./Imagenes/Banner.jpg);
+    background-size: cover; /* Para que se adapte al tamaño */
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    z-index: -1;
+    color: white;
+}
+
+.nav_link{
+    color: white;
+    margin-left: 70%;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column; /* De esta forma doy formato a Inicio / Productos / Contacto */
+    grid-auto-columns: max-content; /* De esta forma doy formato a Inicio / Acerca de / Contacto */
+    gap: 2em; /* Da la separacion entre cada opcion*/
+    list-style: none; /* Le quita el estilo a las listas para que no se vea el punto al iniciar */
+    align-items: center;
+    text-decoration: none; /* Hace que al apretar no cambie de color */
+    cursor: pointer; /* FUNCIONAL */
+    font-weight: 300;
+}
+
+.text{
+    text-align: center;
+}
+
+.footer{
+    background-color: black;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+
+.container{
+    text-align: center;
+    margin-top: 300px;
+    color: black;
+    overflow: visible;
+    vertical-align: auto;
+ }
+
+ .about_products{
+    padding-top: 40px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit,minmax(260px,auto)); /* Para ajustar a la pantalla segun el numero de columnas puestas */
+    margin-top: 20px;
+}
+
+.product {
+    display: grid;
+    gap: 0.2em;
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin: 0 auto;
+    color: black;
+    
+}
+
+.products {
+    width: 100%;
+    height: 100%;
+    
+    
+}
+
+.product_image {
+    
+    width: 100%;
+    height: 100%;
+    
+}
+
+.about{
+    text-align: center;
+ }
+
+ .testimony_container{
+    margin-top: 50px;
+ }
+
+.testimony_img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+.button{ /* Este es el boton de AGREGAR CARRITO */
+    display: inline-block;
+    background-color: #2091F9;
+    justify-self: center;
+    color: white;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 32px;
+}
+/*  Transiciones para el JS ---------------------------------------   */
+
+.product .product-image {
+    width: 260px; /* Tamaño fijo para el espacio de la imagen */
+    height: 260px; /* Tamaño fijo para el espacio de la imagen */
+    overflow: hidden; /* Para recortar la imagen si es más grande */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.product .product-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 260px;
+}
+
+.product .product-image img:nth-child(2) {
+    opacity: 0; /* Oculta la segunda imagen por defecto */
+    transition: opacity 1s; /* Agrega una transición de fundido */
+}
